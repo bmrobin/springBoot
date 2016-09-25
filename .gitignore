@@ -3,6 +3,4 @@
 *.iml
 .gradle
 /gradle
-gradlew
-gradlew.bat
 .DS_Store
