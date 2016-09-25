@@ -2,5 +2,4 @@
 .idea
 *.iml
 .gradle
-/gradle
 .DS_Store
