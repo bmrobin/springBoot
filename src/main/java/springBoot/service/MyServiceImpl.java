@@ -19,7 +19,6 @@ public class MyServiceImpl implements MyService {
     @Autowired
     private MyRepository repository;
 
-    @Override
     public Person savePerson(String firstName, String lastName) {
         Person person = new Person();
         person.setFirstName(firstName);
@@ -27,12 +26,10 @@ public class MyServiceImpl implements MyService {
         return repository.save(person);
     }
 
-    @Override
     public Person findPerson(Long id) {
         return repository.findOne(id);
     }
 
-    @Override
     public List<Person> findPeople() {
         List<Person> people = new ArrayList<Person>();
 
@@ -43,7 +40,6 @@ public class MyServiceImpl implements MyService {
         return people;
     }
 
-    @Override
     public void deletePeople() {
         repository.deleteAll();
     }

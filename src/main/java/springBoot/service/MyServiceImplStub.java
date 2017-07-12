@@ -28,14 +28,12 @@ public class MyServiceImplStub implements MyService {
     @Autowired
     private MyRepository repository;
 
-    @Override
     public Person savePerson(String firstName, String lastName) {
         System.out.println("saving " + this.firstName + " " + this.lastName);
 
         return new Person();
     }
 
-    @Override
     public Person findPerson(Long id) {
         Person test1 = new Person();
         test1.setFirstName(this.firstName);
@@ -43,7 +41,6 @@ public class MyServiceImplStub implements MyService {
         return test1;
     }
 
-    @Override
     public List<Person> findPeople() {
         List<Person> people = new ArrayList<Person>();
 
@@ -56,7 +53,6 @@ public class MyServiceImplStub implements MyService {
         return people;
     }
 
-    @Override
     public void deletePeople() {
         System.out.println("deleting stub people");
     }
